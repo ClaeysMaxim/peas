@@ -5,6 +5,7 @@ const en = {
     services: "Services",
     fleet: "Fleet",
     contact: "Contact",
+    experienceTag: "30+ years experience",
   },
   hero: {
     title: "Luxury Airport & Passenger Transport",
@@ -12,6 +13,7 @@ const en = {
       "Professional and comfortable transport to any European airport with our premium service",
     bookNow: "Book Now",
     discoverService: "Discover Our Service",
+    experienceBadge: "30+ years experience",
   },
   features: {
     title: "Why Choose P.E.A.S.?",
@@ -255,6 +257,13 @@ const en = {
   common: {
     moreInfo: "More information",
     required: "*",
+  },
+  experience: {
+    banner: "Trusted by customers since 1994 - Premium transport services",
+    years: "years experience",
+  },
+  floating: {
+    experience: "years experience",
   },
 };
 
