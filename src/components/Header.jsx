@@ -1,5 +1,5 @@
 import { useState, useContext } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "@tanstack/react-router";
 import { LanguageContext } from "../contexts/LanguageContext";
 import { useTranslation } from "../hooks/useTranslation";
 import logoImage from "../assets/images/peas-logo.png";
@@ -59,59 +59,54 @@ const Header = () => {
 
             <ul className={`nav__list ${isMenuOpen ? "nav__list--open" : ""}`}>
               <li className="nav__item">
-                <NavLink
+                <Link
                   to="/"
-                  className={({ isActive }) =>
-                    isActive ? "nav__link nav__link--active" : "nav__link"
-                  }
+                  className="nav__link"
+                  activeProps={{ className: "nav__link nav__link--active" }}
                   onClick={handleLinkClick}
                 >
                   {t("header.home")}
-                </NavLink>
+                </Link>
               </li>
               <li className="nav__item">
-                <NavLink
+                <Link
                   to="/booking"
-                  className={({ isActive }) =>
-                    isActive ? "nav__link nav__link--active" : "nav__link"
-                  }
+                  className="nav__link"
+                  activeProps={{ className: "nav__link nav__link--active" }}
                   onClick={handleLinkClick}
                 >
                   {t("header.booking")}
-                </NavLink>
+                </Link>
               </li>
               <li className="nav__item">
-                <NavLink
+                <Link
                   to="/services"
-                  className={({ isActive }) =>
-                    isActive ? "nav__link nav__link--active" : "nav__link"
-                  }
+                  className="nav__link"
+                  activeProps={{ className: "nav__link nav__link--active" }}
                   onClick={handleLinkClick}
                 >
                   {t("header.services")}
-                </NavLink>
+                </Link>
               </li>
               <li className="nav__item">
-                <NavLink
+                <Link
                   to="/fleet"
-                  className={({ isActive }) =>
-                    isActive ? "nav__link nav__link--active" : "nav__link"
-                  }
+                  className="nav__link"
+                  activeProps={{ className: "nav__link nav__link--active" }}
                   onClick={handleLinkClick}
                 >
                   {t("header.fleet")}
-                </NavLink>
+                </Link>
               </li>
               <li className="nav__item">
-                <NavLink
+                <Link
                   to="/contact"
-                  className={({ isActive }) =>
-                    isActive ? "nav__link nav__link--active" : "nav__link"
-                  }
+                  className="nav__link"
+                  activeProps={{ className: "nav__link nav__link--active" }}
                   onClick={handleLinkClick}
                 >
                   {t("header.contact")}
-                </NavLink>
+                </Link>
               </li>
             </ul>
           </nav>
