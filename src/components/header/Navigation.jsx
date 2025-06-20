@@ -112,8 +112,3 @@ const Navigation = () => {
 };
 
 export default Navigation;
-    </nav>
-  );
-};
-
-export default Navigation;

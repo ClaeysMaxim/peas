@@ -5,6 +5,7 @@ const nl = {
     services: "Service",
     fleet: "Wagenpark",
     contact: "Contact",
+    experienceTag: "30+ jaar ervaring",
   },
   hero: {
     title: "Luxe Luchthaven- & Personenvervoer",
@@ -12,6 +13,7 @@ const nl = {
       "Professioneel en comfortabel vervoer naar elke Europese luchthaven met onze premium service",
     bookNow: "Reserveer Nu",
     discoverService: "Ontdek Onze Service",
+    experienceBadge: "30+ jaar ervaring",
   },
   features: {
     title: "Waarom Kiezen voor P.E.A.S.?",
@@ -255,6 +257,13 @@ const nl = {
   common: {
     moreInfo: "Meer informatie",
     required: "*",
+  },
+  experience: {
+    banner: "Vertrouwd door klanten sinds 1994 - Premium vervoersdiensten",
+    years: "jaar ervaring",
+  },
+  floating: {
+    experience: "jaar ervaring",
   },
 };
 
