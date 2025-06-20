@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { NavLink } from "react-router-dom";
+import { Link } from "@tanstack/react-router";
 import { useTranslation } from "../../hooks/useTranslation";
 
 const Navigation = () => {
@@ -57,61 +57,61 @@ const Navigation = () => {
       </button>
       <ul className={`nav__list ${mobileMenuOpen ? "nav__list--open" : ""}`}>
         <li className="nav__item">
-          <NavLink
+          <Link
             to="/"
-            className={({ isActive }) =>
-              isActive ? "nav__link nav__link--active" : "nav__link"
-            }
+            className="nav__link"
+            activeProps={{ className: "nav__link nav__link--active" }}
             onClick={closeMobileMenu}
           >
             {t("header.home")}
-          </NavLink>
+          </Link>
         </li>
         <li className="nav__item">
-          <NavLink
+          <Link
             to="/services"
-            className={({ isActive }) =>
-              isActive ? "nav__link nav__link--active" : "nav__link"
-            }
+            className="nav__link"
+            activeProps={{ className: "nav__link nav__link--active" }}
             onClick={closeMobileMenu}
           >
             {t("header.services")}
-          </NavLink>
+          </Link>
         </li>
         <li className="nav__item">
-          <NavLink
+          <Link
             to="/fleet"
-            className={({ isActive }) =>
-              isActive ? "nav__link nav__link--active" : "nav__link"
-            }
+            className="nav__link"
+            activeProps={{ className: "nav__link nav__link--active" }}
             onClick={closeMobileMenu}
           >
             {t("header.fleet")}
-          </NavLink>
+          </Link>
         </li>
         <li className="nav__item">
-          <NavLink
+          <Link
             to="/contact"
-            className={({ isActive }) =>
-              isActive ? "nav__link nav__link--active" : "nav__link"
-            }
+            className="nav__link"
+            activeProps={{ className: "nav__link nav__link--active" }}
             onClick={closeMobileMenu}
           >
             {t("header.contact")}
-          </NavLink>
+          </Link>
         </li>
         <li className="nav__item">
-          <NavLink
+          <Link
             to="/booking"
-            className={({ isActive }) =>
-              isActive ? "nav__link nav__link--active" : "nav__link"
-            }
+            className="nav__link"
+            activeProps={{ className: "nav__link nav__link--active" }}
             onClick={closeMobileMenu}
           >
             {t("header.booking")}
-          </NavLink>
+          </Link>
         </li>
       </ul>
+    </nav>
+  );
+};
+
+export default Navigation;
     </nav>
   );
 };
