@@ -74,10 +74,6 @@ npm run build
 
 Deze redesign transformeert een traditionele transport website naar een moderne, gebruiksvriendelijke ervaring die de premium service van P.E.A.S. perfect weergeeft. Elke interactie is doordacht ontworpen om vertrouwen en professionaliteit uit te stralen.
 
-## 🌐 Live Demo
-
-**[Bekijk de website hier ➜](https://claeysmaxim.github.io/peas/)**
-
 ---
 
 *Gebouwd voor P.E.A.S. - Pan European Airport Service*
