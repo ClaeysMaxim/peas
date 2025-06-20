@@ -1,12 +1,12 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import { HashRouter } from "react-router-dom"; // Verander naar HashRouter
+import { BrowserRouter } from "react-router-dom"; // Terug naar BrowserRouter
 import App from "./App.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <HashRouter> {/* Geen basename meer nodig */}
+    <BrowserRouter> {/* Geen basename nodig */}
       <App />
-    </HashRouter>
+    </BrowserRouter>
   </StrictMode>
 );
