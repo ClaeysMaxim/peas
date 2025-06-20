@@ -1,0 +1,79 @@
+/* Contact Form Styles */
+/* Most of these styles are duplicated in pages/contact.css */
+/* Consider consolidating them into one file and removing this file */
+
+/* Keep only unique styles that aren't in contact.css */
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: var(--spacing-xl);
+  background-color: var(--color-bg);
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form__title {
+  font-size: 2rem;
+  margin-bottom: var(--spacing-md);
+  color: var(--color-primary);
+  text-align: center;
+}
+
+.contact-form__label {
+  font-size: 1rem;
+  margin-bottom: var(--spacing-xs);
+  color: var(--color-text);
+  display: block;
+}
+
+.contact-form__button {
+  width: 100%;
+  padding: var(--spacing-sm);
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border: none;
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color var(--transition-fast);
+}
+
+.contact-form__button:hover {
+  background-color: var(--color-primary-dark);
+}
+
+.form-success {
+  text-align: center;
+  padding: 4rem 0;
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-success__icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: var(--color-success, #28a745);
+  color: white;
+  font-size: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.form-success__title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--color-secondary);
+}
+
+.form-success__message {
+  font-size: 1.1rem;
+  color: var(--color-text);
+  margin-bottom: 1.5rem;
+  max-width: 500px;
+}

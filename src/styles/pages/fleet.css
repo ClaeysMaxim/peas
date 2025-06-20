@@ -1,0 +1,109 @@
+.fleet__intro {
+  margin-bottom: var(--spacing-xl);
+  font-size: 1.1rem;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  color: var(--color-secondary-light);
+}
+
+.fleet__single {
+  margin-bottom: var(--spacing-xxl);
+}
+
+.fleet-item {
+  display: grid;
+  grid-template-columns: 1fr;
+  box-shadow: var(--shadow-md);
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+  background-color: var(--color-white);
+}
+
+.fleet-item__image-container {
+  height: 300px;
+  overflow: hidden;
+}
+
+.fleet-item__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.fleet-item:hover .fleet-item__image {
+  transform: scale(1.05);
+}
+
+.fleet-item__content {
+  padding: var(--spacing-xl);
+}
+
+.fleet-item__title {
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-md);
+  font-size: 1.8rem;
+}
+
+.fleet-item__description {
+  margin-bottom: var(--spacing-lg);
+  color: var(--color-secondary-light);
+}
+
+.fleet-item__features-title {
+  margin-bottom: var(--spacing-sm);
+  font-size: 1.2rem;
+  color: var(--color-secondary);
+}
+
+.fleet-item__features-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-sm);
+}
+
+.fleet-item__feature {
+  position: relative;
+  padding-left: 1.5rem;
+  line-height: 1.4;
+}
+
+.fleet-item__feature::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--color-primary);
+  font-weight: bold;
+}
+
+.fleet__cta {
+  margin-top: var(--spacing-xl);
+  text-align: center;
+  padding: var(--spacing-xl);
+  background-color: var(--color-grey-light);
+  border-radius: var(--border-radius-lg);
+}
+
+.fleet__cta-title {
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-md);
+}
+
+.fleet__cta-text {
+  margin-bottom: var(--spacing-lg);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 768px) {
+  .fleet-item {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .fleet-item__image-container {
+    height: 100%;
+  }
+}

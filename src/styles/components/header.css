@@ -1,0 +1,138 @@
+.header {
+  padding: var(--spacing-md) 0;
+  background-color: var(--color-white);
+  box-shadow: var(--shadow-sm);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__logo {
+  height: auto;
+  max-height: 80px;
+  width: auto;
+  object-fit: contain;
+}
+
+.header__logo-link {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.header__top {
+  background-color: var(--color-secondary);
+  padding: var(--spacing-xs) 0;
+}
+
+.header__top-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.header__language {
+  display: flex;
+  align-items: center;
+}
+
+.header__language-button {
+  background-color: transparent;
+  border: 1px solid var(--color-white);
+  color: var(--color-white);
+  padding: 0.3rem 0.6rem;
+  border-radius: var(--border-radius-sm);
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: all var(--transition-normal);
+}
+
+.header__language-button:hover {
+  background-color: var(--color-white);
+  color: var(--color-primary);
+}
+
+.header__book-button {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  padding: var(--spacing-xs) var(--spacing-md);
+  border-radius: var(--border-radius-sm);
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.header__book-button:hover {
+  background-color: var(--color-primary-dark);
+  color: var(--color-white);
+}
+
+.header__tagline {
+  color: var(--color-primary);
+  font-size: 1rem;
+  margin-top: -0.5rem;
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 0;
+    position: relative;
+    height: auto;
+    text-align: center;
+    overflow: visible;
+  }
+
+  .header__container {
+    padding: 0;
+    width: 100%;
+    max-width: 100%;
+    display: block;
+  }
+
+  .header__logo {
+    position: relative;
+    z-index: 95;
+    width: 100%;
+    padding: 15px;
+    height: auto;
+    max-height: none;
+    object-fit: contain;
+  }
+
+  /* Adjust logo to a more reasonable size */
+  .header__logo img {
+    height: auto;
+    width: 60%; /* Reduced from 90% */
+    max-width: none;
+    max-height: none;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .header__logo-link {
+    display: block;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+  }
+
+  .header__logo-link img {
+    height: auto;
+    width: 60%; /* Reduced from 90% */
+    max-height: none;
+    margin: 0 auto;
+    display: inline-block;
+  }
+
+  .header__tagline {
+    display: none;
+  }
+}

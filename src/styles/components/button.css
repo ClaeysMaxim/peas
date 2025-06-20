@@ -1,0 +1,96 @@
+/* This is the main button styling file */
+
+.button {
+  display: inline-flex; /* Changed from inline-block */
+  justify-content: center;
+  align-items: center;
+  padding: 0.75rem 2rem;
+  /* Change background to ensure it doesn't override primary styling */
+  background-color: var(--color-secondary);
+  color: var(--color-white);
+  border: none;
+  border-radius: var(--border-radius-md);
+  cursor: pointer;
+  font-weight: 600;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all var(--transition-normal);
+}
+
+/* Primary button (gold) */
+.button.button--primary {
+  background-color: var(--color-primary) !important; /* Force gold color */
+  color: white;
+  border: 2px solid var(--color-primary);
+}
+
+.button.button--primary:hover {
+  background-color: var(--color-primary-dark) !important;
+  border-color: var(--color-primary-dark);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+/* Secondary button */
+.button--secondary {
+  background-color: var(--color-secondary);
+  color: var(--color-white);
+}
+
+.button--secondary:hover {
+  background-color: var(--color-secondary-light);
+}
+
+/* Outline button */
+.button--outline {
+  background-color: transparent;
+  border: 2px solid var(--color-primary);
+  color: var(--color-primary);
+}
+
+.button--outline:hover {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.button--large {
+  padding: 0.9rem 2.5rem;
+  font-size: 1.1rem;
+}
+
+.button--small {
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+}
+
+.button--block {
+  display: flex; /* Changed from block */
+  width: 100%;
+}
+
+.button--disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Hero-specific button styling to ensure proper height */
+.hero .button {
+  padding: 0.75rem 2rem;
+  line-height: normal; /* Add line height normalization */
+  height: auto;
+  min-height: 0;
+}
+
+/* Mobile responsive styles */
+@media (max-width: 768px) {
+  .button {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.9rem;
+  }
+
+  .button--large {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.9rem;
+  }
+}

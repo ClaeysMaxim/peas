@@ -1,0 +1,151 @@
+/* Service Page Styles */
+.services-intro {
+  max-width: 800px;
+  margin: 0 auto var(--spacing-xl);
+}
+
+.services-intro__text {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--color-secondary-light);
+  text-align: center;
+}
+
+/* Service Blocks Styling - Changed to vertical layout */
+.service-blocks {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xl);
+  margin: var(--spacing-xl) 0;
+  width: 100%;
+}
+
+.service-block {
+  background-color: var(--color-white);
+  border-radius: var(--border-radius-lg);
+  padding: var(--spacing-lg);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-normal);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.service-block:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+.service-block__icon {
+  font-size: 2.5rem;
+  margin-bottom: var(--spacing-md);
+  color: var(--color-primary);
+}
+
+.service-block__title {
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-md);
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.service-block__content {
+  color: var(--color-secondary-light);
+}
+
+.service-block__paragraph {
+  margin-bottom: var(--spacing-md);
+  line-height: 1.6;
+}
+
+.service-block__paragraph:last-child {
+  margin-bottom: 0;
+}
+
+/* Service Why Choose Section */
+.service-why {
+  margin-top: var(--spacing-xxl);
+}
+
+.service-why__title {
+  text-align: center;
+  font-size: 1.8rem;
+  color: var(--color-secondary);
+  margin-bottom: var(--spacing-xl);
+  font-weight: 600;
+}
+
+/* Service Features - Keep as grid layout */
+.service-features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--spacing-lg);
+  width: 100%;
+}
+
+.service-feature {
+  padding: var(--spacing-md);
+  border-left: 3px solid var(--color-primary);
+  background-color: var(--color-white);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-normal);
+}
+
+.service-feature:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+.service-feature__title {
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-sm);
+  font-weight: 600;
+}
+
+.service-feature__text {
+  color: var(--color-secondary-light);
+}
+
+/* Services CTA section */
+.services-cta {
+  margin-top: var(--spacing-xxl);
+  padding: var(--spacing-xl);
+  background-color: var(--color-grey-light);
+  border-radius: var(--border-radius-lg);
+  text-align: center;
+  width: 100%;
+}
+
+.services-cta__title {
+  font-size: 1.8rem;
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-md);
+}
+
+.services-cta__text {
+  font-size: 1.1rem;
+  color: var(--color-secondary);
+  margin-bottom: var(--spacing-lg);
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.services-cta__buttons {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-md);
+  flex-wrap: wrap;
+}
+
+/* Media query for grid responsiveness */
+@media (max-width: 768px) {
+  .service-features {
+    grid-template-columns: 1fr;
+  }
+
+  .services-cta__buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+}

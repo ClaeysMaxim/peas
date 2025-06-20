@@ -1,0 +1,298 @@
+/* Styles specific to the contact page */
+.contact-page {
+  --contact-card-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  --contact-card-radius: var(--border-radius-lg);
+  --contact-card-bg: var(--color-white);
+  --icon-bg: var(--color-primary-light);
+  --icon-color: var(--color-primary);
+}
+
+.contact-grid {
+  display: grid;
+  gap: var(--spacing-xl);
+  margin: var(--spacing-xl) 0;
+}
+
+/* Reset styling voor cards om alle mogelijke borders te verwijderen */
+.contact-grid,
+.contact-info,
+.contact-form-wrapper,
+.contact-info__card,
+.contact-form-card {
+  box-shadow: none;
+  border: none;
+  background-color: transparent;
+}
+
+/* Specifieke styling voor ALLEEN de twee kaarten die we willen tonen */
+.contact-info__card,
+.contact-form-card {
+  background-color: var(--color-white);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-md);
+  padding: var(--spacing-xl);
+  height: 100%;
+}
+
+/* Consistent title styling */
+.contact-info__title,
+.contact-form__title {
+  font-family: var(--font-secondary);
+  font-size: 1.75rem;
+  margin-bottom: var(--spacing-lg);
+  color: var(--color-primary);
+  position: relative;
+  padding-bottom: 0.75rem;
+}
+
+.contact-info__title::after,
+.contact-form__title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  width: 60px;
+  background-color: var(--color-primary);
+}
+
+/* Contact Item Styles */
+.contact-info__item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: var(--spacing-lg);
+}
+
+.contact-info__icon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--icon-bg);
+  color: var(--icon-color);
+  margin-right: var(--spacing-md);
+  font-size: 1.2rem;
+}
+
+.contact-info__content {
+  flex-grow: 1;
+}
+
+.contact-info__subtitle {
+  font-family: var(--font-secondary);
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: var(--color-secondary);
+  font-weight: 600;
+}
+
+.contact-info__address {
+  font-style: normal;
+  line-height: 1.6;
+}
+
+.contact-info__address p {
+  margin-bottom: 0.25rem;
+}
+
+.contact-info__link {
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color var(--transition-normal);
+}
+
+.contact-info__link:hover {
+  color: var(--color-primary-dark);
+  text-decoration: underline;
+}
+
+.contact-info__note {
+  font-size: 0.9rem;
+  color: var(--color-grey-dark);
+  margin-top: 0.25rem;
+}
+
+/* Contact Hours */
+.contact-hours__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contact-hours__item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--color-grey);
+}
+
+.contact-hours__item:last-child {
+  border-bottom: none;
+}
+
+.contact-hours__day {
+  font-weight: 500;
+}
+
+.contact-hours__time {
+  color: var(--color-primary);
+}
+
+/* Form Input Styles */
+.form__input-wrapper {
+  position: relative;
+  margin-bottom: var(--spacing-xl);
+}
+
+.form__icon {
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+  color: var(--color-grey-dark);
+  transition: color var(--transition-normal);
+  z-index: 2;
+}
+
+.form__icon--textarea {
+  top: 1.2rem;
+}
+
+.form__control {
+  width: 100%;
+  padding: 1rem 1rem 1rem 3rem;
+  border: 1px solid var(--color-grey);
+  border-radius: var(--border-radius-md);
+  font-family: var(--font-primary);
+  font-size: 1rem;
+  background-color: var(--color-grey-light);
+  transition: all var(--transition-normal);
+}
+
+.form__control--textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+.form__control:focus {
+  border-color: var(--color-primary);
+  outline: none;
+  box-shadow: 0 0 0 3px var(--color-primary-light);
+}
+
+/* Label styling fix */
+.form__label {
+  position: absolute;
+  left: 3rem;
+  top: 1rem;
+  color: var(--color-grey-dark);
+  transition: all var(--transition-normal);
+  pointer-events: none;
+  z-index: 1;
+  background-color: transparent;
+}
+
+/* Animation for label when input has focus or content */
+.form__control:focus + .form__label,
+.form__control:not(:placeholder-shown) + .form__label {
+  transform: translateY(-2.5rem);
+  font-size: 0.85rem;
+  color: var(--color-primary);
+  left: 0;
+  background-color: var(--color-white);
+  padding: 0 0.25rem;
+}
+
+/* Ensure textarea label doesn't overlap */
+.form__control--textarea:focus + .form__label,
+.form__control--textarea:not(:placeholder-shown) + .form__label {
+  transform: translateY(-2.5rem);
+  background-color: var(--color-white);
+  padding: 0 0.25rem;
+}
+
+/* Change icon color on focus */
+.form__control:focus ~ .form__icon {
+  color: var(--color-primary);
+}
+
+/* Add styles for placeholder to ensure accessibility */
+.form__control::placeholder {
+  color: transparent;
+}
+
+.form__control:focus::placeholder {
+  color: var(--color-grey-dark);
+}
+
+/* Button Styles */
+.button--primary {
+  background-color: var(--color-primary);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: var(--border-radius-md);
+  cursor: pointer;
+  transition: all var(--transition-normal);
+}
+
+.button--primary:hover {
+  background-color: var(--color-primary-dark);
+  color: var(--color-white);
+  box-shadow: var(--shadow-md);
+}
+
+.button--block {
+  display: block;
+  width: 100%;
+}
+
+.button--loading {
+  opacity: 0.8;
+  cursor: not-allowed;
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+  .contact-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-xl);
+  }
+
+  /* Ensure equal height and width for both cards */
+  .contact-info,
+  .contact-form-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .contact-info__card,
+  .contact-form-card {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contact-form {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form__group:last-child {
+    margin-top: auto;
+    padding-top: var(--spacing-lg);
+  }
+}
+
+@media (min-width: 992px) {
+  .contact-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}

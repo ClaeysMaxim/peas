@@ -1,0 +1,67 @@
+:root {
+  /* Colors */
+  --color-primary: #b49b3f; /* De goudkleur van het logo */
+  --color-primary-light: #cdb556; /* Lichtere variant */
+  --color-primary-dark: #8a7628; /* Donkerdere variant */
+
+  --color-secondary: #242424;
+  --color-secondary-light: #3a3a3a;
+
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-grey-light: #f5f5f5;
+  --color-grey: #ebebeb;
+  --color-grey-dark: #888888;
+
+  --color-success: #4caf50;
+  --color-error: #f44336;
+
+  /* Typography */
+  --font-primary: "Montserrat", system-ui, -apple-system, sans-serif;
+  --font-secondary: "Playfair Display", Georgia, serif;
+
+  /* Spacing */
+  --spacing-xs: 0.25rem; /* 4px */
+  --spacing-sm: 0.5rem; /* 8px */
+  --spacing-md: 1rem; /* 16px */
+  --spacing-lg: 1.5rem; /* 24px */
+  --spacing-xl: 2rem; /* 32px */
+  --spacing-xxl: 3rem; /* 48px */
+
+  /* Container */
+  --container-width: 1200px;
+  --container-padding: var(--spacing-md);
+  --container-max-width: 1200px;
+
+  /* Border radius */
+  --border-radius-sm: 3px;
+  --border-radius-md: 5px;
+  --border-radius-lg: 8px;
+  --border-radius: 4px;
+
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.5s ease;
+  --transition-speed: 0.3s;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 20px rgba(0, 0, 0, 0.1);
+
+  /* Section spacing */
+  --section-spacing: 5rem;
+
+  /* Text colors */
+  --text-color: #333333;
+  --text-color-light: #6c757d;
+  --text-color-dark: #212529;
+  --border-color: #dee2e6;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --container-padding: 2rem;
+  }
+}

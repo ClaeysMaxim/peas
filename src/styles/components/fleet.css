@@ -1,0 +1,21 @@
+.fleet-item__features-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-sm);
+  margin-top: var(--spacing-md);
+}
+
+.fleet-item__feature {
+  position: relative;
+  padding-left: 1.5rem;
+  line-height: 1.4;
+  color: var(--color-secondary-light);
+}
+
+.fleet-item__feature::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--color-primary);
+  font-weight: bold;
+}
