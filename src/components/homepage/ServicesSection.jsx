@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link } from "@tanstack/react-router";
 import { FaPlane, FaCarAlt, FaUsers } from "react-icons/fa";
 import { useTranslation } from "../../hooks/useTranslation";
 
