@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { useRouter } from "@tanstack/react-router";
 import { FaExclamationTriangle } from "react-icons/fa";
 import { useTranslation } from "../hooks/useTranslation";
 import BookingProgress from "../components/booking/BookingProgress";
@@ -29,8 +29,8 @@ const trainStations = [
 ];
 
 const BookingPage = () => {
-  // Get location to detect navigation
-  const location = useLocation();
+  // Get router to detect navigation
+  const router = useRouter();
   const { t } = useTranslation();
 
   // Initial form data - factored out to allow reset
@@ -349,7 +349,7 @@ const BookingPage = () => {
         setShowValidationSummary(false);
       }
     };
-  }, [location.key]);
+  }, [router.state.location.pathname]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -513,3 +513,4 @@ const BookingPage = () => {
 };
 
 export default BookingPage;
+
