@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { useRouter } from "@tanstack/react-router";
 import { FaUser, FaEnvelope, FaPhone, FaCommentAlt } from "react-icons/fa";
 import { useTranslation } from "../hooks/useTranslation"; // Import missing translation hook
 
 const ContactForm = () => {
-  // Get location to detect navigation
-  const location = useLocation();
+  // Get router to detect navigation
+  const router = useRouter();
   const { t } = useTranslation(); // Add translation hook
 
   // Initial form data - factored out to allow reset
@@ -33,7 +33,7 @@ const ContactForm = () => {
         setError(null);
       }
     };
-  }, [location.key]);
+  }, [router.state.location.pathname]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
