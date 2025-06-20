@@ -34,6 +34,33 @@
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
 }
 
+/* Hero Badge - smaller and more subtle */
+.hero__badge {
+  display: inline-block;
+  margin-bottom: var(--spacing-sm);
+  animation: fadeInUp 0.8s ease-out 0.3s both;
+}
+
+.hero__badge-text {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light));
+  color: var(--color-white);
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  box-shadow: 0 2px 8px rgba(180, 155, 63, 0.2);
+  position: relative;
+}
+
+.hero__badge-text::before {
+  content: "⭐";
+  margin-right: 0.3rem;
+  font-size: 0.7rem;
+}
+
+/* Responsive adjustments */
 @media (max-width: 768px) {
   .hero {
     min-height: 400px;
@@ -46,5 +73,44 @@
 
   .hero__subtitle {
     font-size: 1.2rem;
+  }
+
+  .hero__badge-text {
+    font-size: 0.7rem;
+    padding: 0.25rem 0.6rem;
+  }
+}
+
+.experience-banner__text {
+  color: var(--color-white);
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin: 0;
+  letter-spacing: 0.3px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero {
+    min-height: 400px;
+    height: 60vh;
+  }
+
+  .hero__title {
+    font-size: 2.2rem;
+  }
+
+  .hero__subtitle {
+    font-size: 1.2rem;
+  }
+
+  .hero__badge-text {
+    font-size: 0.8rem;
+    padding: 0.4rem 1rem;
+  }
+
+  .experience-banner__text {
+    font-size: 1rem;
+    padding: 0 var(--spacing-md);
   }
 }
