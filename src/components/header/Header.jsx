@@ -1,6 +1,7 @@
-import { Link } from "react-router-dom";
 import Navigation from "./Navigation";
-import logo from "../../assets/logo.png"; // Update this path as needed
+import logo from "../../assets/logo.png";
+import { Link } from "@tanstack/react-router";
+
 
 const Header = () => {
   return (
