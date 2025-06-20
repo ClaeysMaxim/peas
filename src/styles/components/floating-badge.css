@@ -1,0 +1,145 @@
+/* Floating Experience Badge */
+.floating-badge {
+  position: fixed;
+  top: 120px;
+  right: -300px;
+  z-index: 1000;
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  pointer-events: none;
+}
+
+.floating-badge--visible {
+  right: 20px;
+  pointer-events: auto;
+}
+
+.floating-badge__content {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light));
+  border-radius: 15px;
+  padding: 1rem 1.25rem;
+  box-shadow: 
+    0 10px 30px rgba(180, 155, 63, 0.3),
+    0 4px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  position: relative;
+  max-width: 200px;
+  animation: glow 3s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 
+      0 10px 30px rgba(180, 155, 63, 0.3),
+      0 4px 15px rgba(0, 0, 0, 0.1);
+  }
+  100% {
+    box-shadow: 
+      0 15px 40px rgba(180, 155, 63, 0.4),
+      0 6px 20px rgba(0, 0, 0, 0.15);
+  }
+}
+
+.floating-badge__close {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--color-white);
+  border: none;
+  color: var(--color-secondary);
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.floating-badge__close:hover {
+  background: var(--color-grey-light);
+  transform: scale(1.1);
+}
+
+.floating-badge__icon {
+  flex-shrink: 0;
+}
+
+.floating-badge__star {
+  font-size: 1.5rem;
+  animation: twinkle 2s infinite;
+  display: block;
+}
+
+@keyframes twinkle {
+  0%, 100% { 
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+  50% { 
+    transform: scale(1.2) rotate(5deg);
+    opacity: 0.8;
+  }
+}
+
+.floating-badge__text {
+  color: var(--color-white);
+  text-align: left;
+}
+
+.floating-badge__number {
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-family: var(--font-secondary);
+  line-height: 1;
+  margin-bottom: 0.25rem;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.floating-badge__label {
+  font-size: 0.8rem;
+  font-weight: 500;
+  opacity: 0.95;
+  line-height: 1.2;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .floating-badge {
+    top: 100px;
+    right: -250px;
+  }
+  
+  .floating-badge--visible {
+    right: 15px;
+  }
+  
+  .floating-badge__content {
+    padding: 0.8rem 1rem;
+    max-width: 160px;
+  }
+  
+  .floating-badge__number {
+    font-size: 1.3rem;
+  }
+  
+  .floating-badge__label {
+    font-size: 0.7rem;
+  }
+  
+  .floating-badge__star {
+    font-size: 1.3rem;
+  }
+}
+
+/* Ensure it doesn't interfere with mobile navigation */
+@media (max-width: 768px) {
+  .nav__list--open ~ .floating-badge {
+    display: none;
+  }
+}
